@@ -3,6 +3,8 @@
 Introduction:
 This application is a web application that detects the language of the uploaded file. The web application allows the user to upload a text, doc or a pdf file less than 2MB and detects the language of the file from the first line of the file assuming that the rest of the file content is also of the same language.
 
+The Application uses Java 7 and was tested on Tomcat 7
+
 Detecting Language:
 The application uses the Language Detection API ( https://detectlanguage.com/ ). It uses the JAVA Client API to find the language of the given file.
                 <dependency>
