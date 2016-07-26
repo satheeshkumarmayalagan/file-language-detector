@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html ng-app="languageDetectorApp">
+    <head>
+    
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <title>Language Detector</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+		
+		<!-- Angular JS Scripts -->
+		
+		<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+		        
+        <!-- Internet Explorer HTML5 enabling code: -->
+        
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+
+
+    </head>
+    
+    <body>
+    	<section id="page"> 
+            <header> 
+                <hgroup>
+                    <h3>Language Detector</h3>
+                </hgroup>
+            </header>
+            <section id="fileArea" ng-controller="languageDetectController" >
+                <div class="inline"></div>  
+				<!-- Messages Section -->
+				<div class="messageSection" id="message-area">
+				    <div id="error-message-area" class="alert alert-danger" role="alert" ></div>
+				    <div id="success-message-area" class="alert alert-success" role="alert" ></div>
+				</div>
+				     
+                <article id="article" class="article"> 
+                    <h3>Upload the file</h3>
+					<form class="contact_form" ng-submit="detectLanguageForTheFile()" >
+						<div>
+							<input type="file" file-model="myFile" onchange="angular.element(this).scope().fileNameChanged(this)" />
+						</div>
+						<input type="submit" class="more_btn" value="Submit"/>
+						
+					</form>
+                </article>
+                <div class="line"></div>
+            </section>
+		</section> <!-- Closing the #page section -->
+        <script src="script.js"></script>
+    </body>
+</html>
